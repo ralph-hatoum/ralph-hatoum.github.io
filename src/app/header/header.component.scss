@@ -1,0 +1,31 @@
+img {
+  width : 15px;
+  height: 15px;
+}
+header{
+    text-align: center;
+    background-color: rgb(191, 48, 48);
+    margin-bottom: 0px;
+    padding: 10px;
+  }
+  a {
+    margin: 0 10px;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    &:hover {
+      text-decoration: underline;
+    }
+
+
+  }
+  h1{
+    font-style: gras;
+    color:white;
+  }
+
+  .active {
+    color: rgb(255, 255, 255);
+    text-decoration: underline;
+  }
+
+

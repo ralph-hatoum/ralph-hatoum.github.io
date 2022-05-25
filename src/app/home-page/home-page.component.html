@@ -1,0 +1,241 @@
+<div class='title-card'>
+    <img
+        src="https://www2.uottawa.ca/study/sites/g/files/bhrskd296/files/styles/max_width_l_1470px/public/2021-10/20170905-BF-CAMPUS-SCENIC-001-resized.jpg?itok=GrxZkpxe">
+    <div class="title">
+        <h1 class="page-title">exTChange</h1>
+        <h2 class="subtitle">Entre en contact avec des TC partis en échange</h2>
+    </div>
+
+</div>
+
+
+<p>Tu es en TC et tu es perdu face à toutes les possibilités d'échange ?</p>
+<p>Tu as déjà trouvé une université qui t'intéresse, mais tu voudrais entrer en contact avec des TC qui y sont déjà allé
+    pour poser des questions ?</p>
+<p>Tu es parti en échange et tu voudrais partager ton expérience ?</p>
+<p>Tu es au bon endroit !</p>
+
+<mat-accordion>
+
+
+    <mat-expansion-panel class="mat-expansion-panel">
+        <mat-expansion-panel-header>
+            <mat-panel-title class="mat-panel-title">
+                Europe
+            </mat-panel-title>
+        </mat-expansion-panel-header>
+        <div *ngFor="let item of homepage_.landing_page_array">
+            <div *ngFor="let country of pays_europe">
+                <div *ngIf="item.continent=='Europe' && item.country==country">
+
+                    <div class="container">
+                        <div class='sideleft'>
+                            <h1>
+                                {{item.name}}
+                            </h1>
+                        </div>
+                        <div class='sidemain'>
+                            <h2>
+                                {{item.localisation}}
+                                <!-- item.localisation -->
+                            </h2>
+                        </div>
+                        <div class='sideright'>
+                            <button type='button' (click)="seeUniv(item._id)">Voir les témoignages</button>
+                        </div>
+                        <!--
+                </div>div class = 'button'>
+                    <a routerLink="../univ/0"><button class="Universitypage" > Check University</button></a>
+                </div> -->
+                        <br>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </mat-expansion-panel>
+
+
+
+    <mat-expansion-panel class="mat-expansion-panel">
+        <mat-expansion-panel-header>
+            <mat-panel-title class="mat-panel-title">
+                Amérique du Nord
+            </mat-panel-title>
+        </mat-expansion-panel-header>
+        <div *ngFor="let item of homepage_.landing_page_array">
+            <!--ngif pour la barre de recherche -->
+            <div *ngIf="item.continent=='Amerique du Nord'">
+                <div class="container">
+                    <div class='sideleft'>
+                        <h1>
+                            {{item.name}}
+                        </h1>
+                    </div>
+                    <div class='sidemain'>
+                        <h2>
+                            {{item.localisation}}
+                            <!-- item.localisation -->
+                        </h2>
+                    </div>
+                    <div class='sideright'>
+                        <button type='button' (click)="seeUniv(item._id)">See univ</button>
+                    </div>
+                    <!--
+                </div>div class = 'button'>
+                    <a routerLink="../univ/0"><button class="Universitypage" > Check University</button></a>
+                </div> -->
+
+                    <br>
+                </div>
+            </div>
+        </div>
+    </mat-expansion-panel>
+
+
+    <mat-expansion-panel class="mat-expansion-panel">
+        <mat-expansion-panel-header>
+            <mat-panel-title class="mat-panel-title">
+                Amérique du Sud
+            </mat-panel-title>
+        </mat-expansion-panel-header>
+        <div *ngFor="let item of homepage_.landing_page_array">
+            <!--ngif pour la barre de recherche -->
+            <div *ngIf="item.continent=='Amerique du Sud'">
+                <div class="container">
+                    <div class='sideleft'>
+                        <h1>
+                            {{item.name}}
+                        </h1>
+                    </div>
+                    <div class='sidemain'>
+                        <h2>
+                            {{item.localisation}}
+                            <!-- item.localisation -->
+                        </h2>
+                    </div>
+                    <div class='sideright'>
+                        <button type='button' (click)="seeUniv(item._id)">See univ</button>
+                    </div>
+                    <!--
+                </div>div class = 'button'>
+                    <a routerLink="../univ/0"><button class="Universitypage" > Check University</button></a>
+                </div> -->
+
+                    <br>
+                </div>
+            </div>
+        </div>
+    </mat-expansion-panel>
+
+
+    <mat-expansion-panel class="mat-expansion-panel">
+        <mat-expansion-panel-header>
+            <mat-panel-title class="mat-panel-title">
+                Asie
+            </mat-panel-title>
+        </mat-expansion-panel-header>
+        <div *ngFor="let item of homepage_.landing_page_array">
+            <!--ngif pour la barre de recherche -->
+            <div *ngIf="item.continent=='Asie'">
+                <div class="container">
+                    <div class='sideleft'>
+                        <h1>
+                            {{item.name}}
+                        </h1>
+                    </div>
+                    <div class='sidemain'>
+                        <h2>
+                            {{item.localisation}}
+                            <!-- item.localisation -->
+                        </h2>
+                    </div>
+                    <div class='sideright'>
+                        <button type='button' (click)="seeUniv(item._id)">See univ</button>
+                    </div>
+                    <!--
+                </div>div class = 'button'>
+                    <a routerLink="../univ/0"><button class="Universitypage" > Check University</button></a>
+                </div> -->
+
+                    <br>
+                </div>
+            </div>
+        </div>
+    </mat-expansion-panel>
+
+
+    <mat-expansion-panel class="mat-expansion-panel">
+        <mat-expansion-panel-header>
+            <mat-panel-title class="mat-panel-title">
+                Afrique
+            </mat-panel-title>
+        </mat-expansion-panel-header>
+        <div *ngFor="let item of homepage_.landing_page_array">
+            <!--ngif pour la barre de recherche -->
+            <div *ngIf="item.continent=='Afrique'">
+                <div class="container">
+                    <div class='sideleft'>
+                        <h1>
+                            {{item.name}}
+                        </h1>
+                    </div>
+                    <div class='sidemain'>
+                        <h2>
+                            {{item.localisation}}
+                            <!-- item.localisation -->
+                        </h2>
+                    </div>
+                    <div class='sideright'>
+                        <button type='button' (click)="seeUniv(item._id)">See univ</button>
+                    </div>
+                    <!--
+                </div>div class = 'button'>
+                    <a routerLink="../univ/0"><button class="Universitypage" > Check University</button></a>
+                </div> -->
+
+                    <br>
+                </div>
+            </div>
+        </div>
+    </mat-expansion-panel>
+
+
+    <mat-expansion-panel class="mat-expansion-panel">
+        <mat-expansion-panel-header>
+            <mat-panel-title class="mat-panel-title">
+                Océanie
+            </mat-panel-title>
+        </mat-expansion-panel-header>
+        <div *ngFor="let item of homepage_.landing_page_array">
+            <!--ngif pour la barre de recherche -->
+            <div *ngIf="item.continent=='Océanie '">
+                <div class="container">
+                    <div class='sideleft'>
+                        <h1>
+                            {{item.name}}
+                        </h1>
+                    </div>
+                    <div class='sidemain'>
+                        <h2>
+                            {{item.localisation}}
+                            <!-- item.localisation -->
+                        </h2>
+                    </div>
+                    <div class='sideright'>
+                        <button type='button' (click)="seeUniv(item._id)">See univ</button>
+                    </div>
+                    <!--
+                </div>div class = 'button'>
+                    <a routerLink="../univ/0"><button class="Universitypage" > Check University</button></a>
+                </div> -->
+
+                    <br>
+                </div>
+            </div>
+        </div>
+    </mat-expansion-panel>
+
+
+</mat-accordion>

@@ -1,0 +1,21 @@
+<div class="be-comment">
+  <div class="be-comment-content">
+    <div class="be-comment-name">
+      <h2>{{comment.author}} ({{comment.mail_phone}})</h2>
+    </div>
+    <span class="be-comment-time">
+      <i class="fa fa-clock-o"></i>
+      {{comment.date | date: 'shortDate'}}
+    </span>
+    <div class="be-comment-text">
+
+      <p *ngIf="comment.notes[0]==-1"><b>Coût de la vie : </b> moins cher que Lyon </p>
+      <p *ngIf="comment.notes[0]==0"><b>Coût de la vie :</b> comme Lyon </p>
+      <p *ngIf="comment.notes[0]==1"><b>Coût de la vie :</b> plus cher que Lyon </p>
+      <p><b>Vie associative</b> : {{comment.notes[1]}}/5</p>
+      <p><b>Qualité des cours</b> : {{comment.notes[2]}}/5</p>
+
+      <p>{{comment.content}}</p>
+    </div>
+  </div>
+</div>

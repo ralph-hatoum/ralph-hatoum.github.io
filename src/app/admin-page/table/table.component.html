@@ -1,0 +1,31 @@
+<div class="container">
+  <div class="column">
+    <div *ngFor="let uni of uni_list.landing_page_array" class="uni">
+      <p>{{uni.name}}</p>
+      <button (click)="uni_onclick(uni._id)">Edit page</button>
+    </div>
+  </div>
+  <div class="column-comments">
+    <div *ngIf="!uni">
+      <p>Choisissez une université dans la liste</p>
+    </div>
+    <div *ngIf="uni" class="univ">
+      <h1>{{uni.name}}</h1>
+      <h2>{{uni.continent}}, {{uni.country}}</h2>
+      <img class="uni-pic" src={{uni.picture}}>
+      <h3>{{uni.localisation}}</h3>
+      <p>{{uni.description}}</p>
+      <!-- <button class="modif">Modifier les informations</button>
+      <button class="del">Supprimer l'université</button> -->
+      <div *ngFor="let testimony of uni.comments" class="uni-comments">
+        <p><b>Auteur : </b> {{testimony.author}}</p>
+        <p><b>Date : </b> {{testimony.date | date: 'shortDate'}} </p>
+        <p><b>Contenu :</b> {{testimony.content}}</p>
+        <p><b>Coordonnées : </b> {{testimony.mail_phone}}</p>
+        <!-- <button class="modif">Modifier</button> -->
+        <button class="del" (click)="deleteComm(testimony.date)">Supprimer</button>
+
+      </div>
+    </div>
+  </div>
+</div>

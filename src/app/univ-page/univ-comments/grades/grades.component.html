@@ -1,0 +1,39 @@
+<form>
+  <div class="radio-group">
+    <h3 class="Titre">Coût de la vie par rapport à Lyon</h3>
+    <input type="radio" value="-1" id="option-one" name="selector" (change)="radioHandlerEvent($event)">
+    <label for="option-one">- cher</label>
+    <input type="radio" value="0" id="option-two" name="selector" (change)="radioHandlerEvent($event)">
+    <label for="option-two">Pareil</label>
+    <input type="radio" value="1" id="option-three" name="selector" (change)="radioHandlerEvent($event)">
+    <label for="option-three">+ cher</label>
+  </div>
+
+  <div class="radio-group">
+    <h3 class="Titre">Vie associative /5</h3>
+    <input type="radio" value=1 id="option-one2" name="selector2"  (change)="radioHandlerEvent2($event)">
+    <label for="option-one2">1</label>
+    <input type="radio" value=2 id="option-two2" name="selector2" (change)="radioHandlerEvent2($event)">
+    <label for="option-two2">2</label>
+    <input type="radio" value=3 id="option-three2" name="selector2"  (change)="radioHandlerEvent2($event)">
+    <label for="option-three2">3</label>
+    <input type="radio" value=4 id="option-four2" name="selector2"  (change)="radioHandlerEvent2($event)">
+    <label for="option-four2">4</label>
+    <input type="radio" value=5 id="option-five2" name="selector2"  (change)="radioHandlerEvent2($event)">
+    <label for="option-five2">5</label>
+  </div>
+
+  <div class="radio-group">
+    <h3 class="Titre">Qualité des cours /5</h3>
+    <input type="radio" value=1 id="option-one3" name="selector3" (change)="radioHandlerEvent3($event)">
+    <label for="option-one3">1</label>
+    <input type="radio" value=2 id="option-two3" name="selector3" (change)="radioHandlerEvent3($event)">
+    <label for="option-two3">2</label>
+    <input type="radio" value=3 id="option-three3" name="selector3" (change)="radioHandlerEvent3($event)">
+    <label for="option-three3">3</label>
+    <input type="radio" value=4 id="option-four3" name="selector3"  (change)="radioHandlerEvent3($event)">
+    <label for="option-four3">4</label>
+    <input type="radio" value=4 id="option-five3" name="selector3" (change)="radioHandlerEvent3($event)">
+    <label for="option-five3">5</label>
+  </div>
+</form>

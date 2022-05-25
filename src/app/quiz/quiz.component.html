@@ -1,0 +1,50 @@
+<div class='text'>
+  Trop de choix ? Indécis ? Ce petit quizz peut t'aider ! <br> <br>
+</div>
+
+<div class='container p-5'>
+  <div class='row'>
+
+    <div *ngIf="currentQuiz +1 <= quizzes.length" class='col-sm-8offset-2'>
+      <p class="text-center">Question {{ currentQuiz +1 }} sur {{quizzes.length }}
+      <p>
+      <h1>{{ quizzes[currentQuiz].question }}</h1>
+
+      <ul class="list-group" *ngFor=" let quizz of quizzes[currentQuiz].answer">
+        <label>
+          <div class="list-group-items">
+            <input type="checkbox" name="options" (change)="onAnswer(quizz.option)" multiple>
+            {{ quizz.option }}
+
+          </div>
+
+
+
+        </label>
+
+      </ul>
+      <button class="btn" (click)="Validation()"> Valider </button>
+      <p *ngFor="let rep of answer[currentQuiz]"> </p>
+    </div>
+
+    <button *ngIf="currentQuiz  == quizzes.length" class="endbtn" (click)="showResult()">
+      Afficher les résultats!</button>
+    <div *ngIf="result">
+      <div *ngIf="vide == 'vide'">
+        <p style="text-align: center;">Désolé, aucune université ne correspond à tes critères, réessaye en étant moins
+          exigeant!</p>
+      </div>
+      <div *ngFor="let univ of univCorrect">
+        <div>
+          <div class="container">
+            <h1 class="uni-name">
+              {{univ.name}}
+            </h1>
+            <div>
+              <button class="see-univ" type='button' (click)="seeUniv(univ)">See univ</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>

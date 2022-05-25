@@ -1,0 +1,53 @@
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
+<div class="container" style="object-position: center;">
+  <div class="be-comment-block">
+    <form class="form-block">
+      <h1 class="form-title">Fais nous part de ton expérience !</h1>
+      <div class="row">
+        <div class="col-xs-12 col-sm-6" style="width: 1248px;">
+          <div class="form-group fl_icon">
+            <input class="form-input" type="text" placeholder="Nom et prénom" [(ngModel)]="newCommentName"
+              [ngModelOptions]="{standalone: true}">
+          </div>
+        </div>
+        <div class="col-xs-12 col-sm-6 fl_icon" style="width: 1248px;">
+          <div class="form-group fl_icon">
+            <input class="form-input" type="text" placeholder="Email, téléphone ou autre moyen de contact (préciser)"
+              [(ngModel)]="newCommentMail_phone" [ngModelOptions]="{standalone: true}">
+          </div>
+        </div>
+      </div>
+
+
+      <div class="row">
+        <div class="col-xs-12 col-sm-6" style="width: 1248px;">
+          <div class="form-group fl_icon">
+            <app-grades style="text-align: center"></app-grades>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="row">
+        <div class="col-xs-12">
+          <div class="form-group">
+            <textarea class="form-input"
+              placeholder="(Facultatif) D'autres choses à ajouter ? (dates du séjour, détails particuliers, conseils ...) "
+              [(ngModel)]="newCommentContent" [ngModelOptions]="{standalone: true}"></textarea>
+          </div>
+        </div>
+        <button type="button" (click)="addComment()">Publier !</button>
+      </div>
+
+    </form>
+  </div>
+  <h1 *ngIf="comments.length!=0" style="padding-top: 40px;">Ils sont allés à {{univ.name}}
+  </h1>
+  <div class="separator">
+    <p>
+
+    </p>
+  </div>
+  <app-comment *ngFor="let comm of comments.reverse()" [comment]="comm"></app-comment>
+
+</div>
